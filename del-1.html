@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="sv">
+<head>
+	<meta charset="UTF-8">
+	<title>We ahead front-end-test - Del 1</title>
+	<style type="text/css">article,aside,dialog,figcaption,figure,footer,header,hgroup,main,nav,section{display:block}body{background:#fff;font-family:sans-serif;width:85%;max-width:750px;margin:0 auto;padding:0 25px}h2{font-size:1.75em;text-transform:uppercase}p{font-size:.8125em}.hide-text{text-indent:-9999px}.report{border:solid 1px #afafaf;padding:10px;overflow:hidden;background:#f1f1f1}.report legend{position:absolute;left:-999px}.report .col-left{float:left;width:43%}.report .col-right{float:right;width:57%}.report label{padding:10px 15px;display:block;font-size:.75em;font-weight:700;clear:both;vertical-align:top}.report select,.report input{display:block;width:100%;margin-top:5px}.report input{padding:5px}.report button{margin:10px 15px}.report .checkbox span{float:left}.report .checkbox input{float:left;width:auto;margin-left:20px;margin-top:0}.report .pair{overflow:hidden;padding:10px 15px}.report .pair label{width:48%;padding:0;clear:none}.report .pair input{width:90%}.report .pair-left{float:left}.report .pair-right{float:right}.report textarea{width:98%;margin-top:5px}.report button{border:solid 1px #AAA;-webkit-border-radius:1px;-moz-border-radius:1px;border-radius:1px;padding:12px 25px;color:#000;float:right}caption{font-size:1.75em;text-transform:uppercase;text-align:left;margin:1em 0 .5em;font-weight:bold}thead{background:#f1f1f1}th,tfoot{text-transform:uppercase}tfoot{border-top:solid 1px #f1f1f1}th,td{padding:15px;font-size:.75em}td i{cursor:pointer;display:block;width:16px;height:16px;background:transparent url(/assets/icons.png) no-repeat 0 0}.action-edit i{background-position:-192px 0}.action-delete i{width:13px;background-position:-225px 0}</style>
+	<script type="text/javascript">!function(){var b,c,a=["header","hgroup","nav","menu","section","article","aside","footer"];for(b=0,c=a.length;c>b;++b)document.createElement(a[b])}();</script>
+	<script src="/del-1.js" async defer></script>
+</head>
+<body>
+	<h1>Tidrapportering</h1>
+	<form class="report">
+		<input type="hidden" name="index" />
+		<div class="col-left">
+			<label>
+				Projekt
+				<select name="project" id="project">
+					<option value="">Var god välj ett projekt...</option>
+					<option value="project1">Projekt 1</option>
+					<option value="project2">Projekt 2</option>
+					<option value="project3">Projekt 3</option>
+				</select>
+			</label>
+			<label>
+				Aktivitet
+				<select name="activity" id="activity">
+					<option value="">Var god väl en aktivitet...</option>
+					<option value="activity1">Aktivitet 1</option>
+					<option value="activity2">Aktivitet 2</option>
+					<option value="activity3">Aktivitet 3</option>
+				</select>
+			</label>
+			<div class="pair">
+				<label class="pair-left">
+					Från
+					<input type="number" min="0" max="24" name="from" id="from"/>
+				</label>
+				<label class="pair-right">
+					Till
+					<input type="number" min="0" max="24" name="to" id="to"/>
+				</label>
+			</div>
+			<label class="checkbox">
+				<span>Debiterbar</span>
+				<input type="checkbox" name="billable" id="billable"/>
+			</label>
+		</div>
+		<div class="col-right">
+			<label>
+				Anteckning
+				<textarea name="note" id="note" cols="30" rows="10"></textarea>
+			</label>
+			<button type="submit">Spara</button>
+		</div>
+	</form>
+	<table>
+		<caption>Inrapporterat (14 april 2016)</caption>
+		<thead>
+			<tr>
+				<th>Projekt</th>
+				<th>Aktivitet</th>
+				<th>Från</th>
+				<th>Till</th>
+				<th>Anteckning</th>
+				<th class="hide-text" colspan="2">Handling</th>
+			</tr>
+		</thead>
+		<tfoot>
+			<tr>
+				<td colspan="7">Summa total tid: <span class="total">0</span>:00</td>
+			</tr>
+		</tfoot>
+		<tbody>
+		</tbody>
+	</table>
+</body>
+</html>
